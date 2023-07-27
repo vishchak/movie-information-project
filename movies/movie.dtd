@@ -1,0 +1,38 @@
+<!ELEMENT movies (movie+)>
+
+        <!ELEMENT movie (title, original_title?, year, director, genre, rating, description, cast, duration, language, country, poster?)>
+        <!ATTLIST movie id CDATA #REQUIRED>
+
+        <!ELEMENT title (#PCDATA)>
+
+        <!ELEMENT original_title (#PCDATA)>
+
+        <!ELEMENT year (#PCDATA)>
+
+        <!ELEMENT director (#PCDATA)>
+
+        <!ELEMENT genre (#PCDATA)>
+
+        <!ELEMENT rating (#PCDATA)>
+
+        <!ELEMENT description (#PCDATA)>
+
+        <!ELEMENT cast (actor+)>
+
+        <!ELEMENT actor (name, role, birthdate?, nationality?)>
+
+        <!ELEMENT name (#PCDATA)>
+
+        <!ELEMENT role (#PCDATA)>
+
+        <!ELEMENT birthdate (#PCDATA)>
+
+        <!ELEMENT nationality (#PCDATA)>
+
+        <!ELEMENT duration (#PCDATA)>
+
+        <!ELEMENT language (#PCDATA)>
+
+        <!ELEMENT country (#PCDATA)>
+
+        <!ELEMENT poster (#PCDATA)>

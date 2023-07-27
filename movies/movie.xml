@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE movies SYSTEM "movie.dtd">
+<movies>
+    <movie id="1">
+        <title>A Clockwork Orange</title>
+        <year>1971</year>
+        <director>Stanley Kubrick</director>
+        <genre>Drama</genre>
+        <rating>8.3</rating>
+        <description>In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion
+            experiment, but it doesn't go as planned.
+        </description>
+        <cast>
+            <actor>
+                <name>Malcolm McDowell</name>
+                <role>Alex DeLarge</role>
+                <birthdate>June 13, 1943</birthdate>
+                <nationality>English</nationality>
+            </actor>
+        </cast>
+        <duration>136 minutes</duration>
+        <language>English</language>
+        <country>United Kingdom</country>
+        <poster>
+            https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXsPmlnqRFmr-RCYRVBIgspYVNtRqfFlKVZpeeBozhF1svwK4
+        </poster>
+    </movie>
+    <movie id="2">
+        <title>Se7en</title>
+        <year>1995</year>
+        <director>David Fincher</director>
+        <genre>Crime</genre>
+        <rating>8.6</rating>
+        <description>Two detectives, a rookie, and a veteran, hunt a serial killer who uses the seven deadly sins as his
+            motives.
+        </description>
+        <cast>
+            <actor>
+                <name>Morgan Freeman</name>
+                <role>William Somerset</role>
+                <birthdate>June 1, 1937</birthdate>
+                <nationality>American</nationality>
+            </actor>
+            <actor>
+                <name>Brad Pitt</name>
+                <role>David Mills</role>
+                <birthdate>December 18, 1963</birthdate>
+                <nationality>American</nationality>
+            </actor>
+        </cast>
+        <duration>127 minutes</duration>
+        <language>English</language>
+        <country>United States</country>
+        <poster>
+            https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSRlDPdCzsvcNb4IqSgv-DdlemiuRp2gJR82B2h620NRU7_Qv7o
+        </poster>
+    </movie>
+    <movie id="3">
+        <title>Shrek</title>
+        <year>2001</year>
+        <director>Andrew Adamson, Vicky Jenson</director>
+        <genre>Animation</genre>
+        <rating>7.8</rating>
+        <description>After his swamp is filled with magical creatures, an ogre agrees to rescue a princess for a
+            villainous lord in order to get his land back.
+        </description>
+        <cast>
+            <actor>
+                <name>Mike Myers</name>
+                <role>Shrek (voice)</role>
+                <birthdate>May 25, 1963</birthdate>
+                <nationality>Canadian</nationality>
+            </actor>
+            <actor>
+                <name>Eddie Murphy</name>
+                <role>Donkey (voice)</role>
+                <birthdate>April 3, 1961</birthdate>
+                <nationality>American</nationality>
+            </actor>
+        </cast>
+        <duration>90 minutes</duration>
+        <language>English</language>
+        <country>United States</country>
+        <poster>
+            https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTB9E9pY1dialQj3AKk0nsb-L668Pf3XNeoqUgdi3RqQrqbU1iE
+        </poster>
+    </movie>
+</movies>

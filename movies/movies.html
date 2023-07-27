@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movie Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Movie Information</h1>
+<div id="movies-container"></div>
+
+<script>
+    function loadMovies() {
+        fetch('movie.xml')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+                const movies = xmlDoc.getElementsByTagName('movie');
+
+                const table = document.createElement('table');
+                const tableHeaders = ['Title', 'Original Title', 'Year', 'Director', 'Genre', 'Rating', 'Description', 'Duration', 'Language', 'Country', 'Cast', 'Poster'];
+                const tableHeaderRow = document.createElement('tr');
+                tableHeaders.forEach(headerText => {
+                    const th = document.createElement('th');
+                    th.textContent = headerText;
+                    tableHeaderRow.appendChild(th);
+                });
+                table.appendChild(tableHeaderRow);
+
+                for (let i = 0; i < movies.length; i++) {
+                    const movie = movies[i];
+                    const title = movie.getElementsByTagName('title')[0].textContent;
+                    const originalTitle = movie.getElementsByTagName('original_title')[0]?.textContent || '';
+                    const year = movie.getElementsByTagName('year')[0].textContent;
+                    const director = movie.getElementsByTagName('director')[0].textContent;
+                    const genre = movie.getElementsByTagName('genre')[0].textContent;
+                    const rating = movie.getElementsByTagName('rating')[0].textContent;
+                    const description = movie.getElementsByTagName('description')[0].textContent;
+                    const duration = movie.getElementsByTagName('duration')[0].textContent;
+                    const language = movie.getElementsByTagName('language')[0].textContent;
+                    const country = movie.getElementsByTagName('country')[0].textContent;
+                    const poster = movie.getElementsByTagName('poster')[0].textContent;
+                    const actors = Array.from(movie.getElementsByTagName('actor')).map(actor => actor.textContent).join(', ');
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                            <td>${title}</td>
+                            <td>${originalTitle}</td>
+                            <td>${year}</td>
+                            <td>${director}</td>
+                            <td>${genre}</td>
+                            <td>${rating}</td>
+                            <td>${description}</td>
+                            <td>${duration}</td>
+                            <td>${language}</td>
+                            <td>${country}</td>
+                            <td>${actors}</td>
+                            <td><img src="${poster}" alt="${title} Poster" width="100" height="150"></td>
+                        `;
+                    table.appendChild(row);
+                }
+
+                const moviesContainer = document.getElementById('movies-container');
+                moviesContainer.appendChild(table);
+            })
+            .catch(error => console.error('Error loading movie data:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', loadMovies);
+</script>
+</body>
+</html>
